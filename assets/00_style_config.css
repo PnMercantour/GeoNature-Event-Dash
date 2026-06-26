@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap");
+
+:root {
+    /* Typography */
+    --font-body: "Manrope", sans-serif;
+    --font-heading: "Outfit", sans-serif;
+
+    /* Palette */
+    --color-forest: #78b63c;
+    --color-pine: #3f7f4c;
+    --color-moss: #7ea05a;
+    --color-sage: #dfe7cf;
+    --color-stone: #f5f1e8;
+    --color-sky: #d7e8ea;
+    --color-ink: #223127;
+    --color-white: #ffffff;
+
+    /* Surfaces */
+    --surface-panel: rgba(255, 255, 255, 0.86);
+    --surface-card-from: rgba(255, 255, 255, 0.98);
+    --surface-card-to: rgba(245, 241, 232, 0.94);
+
+    /* Effects */
+    --shadow-panel: 0 18px 45px rgba(34, 49, 39, 0.12);
+    --shadow-card: 0 16px 32px rgba(47, 107, 63, 0.12);
+    --shadow-logo: 0 10px 24px rgba(18, 34, 22, 0.12);
+
+    /* Radius */
+    --radius-panel: 24px;
+    --radius-card: 22px;
+    --radius-hero: 32px;
+    --radius-logo: 18px;
+    --radius-map: 20px;
+
+    /* Spacing */
+    --space-shell-y: 32px;
+    --space-shell-x: 20px;
+    --space-panel: 22px;
+    --space-panel-mobile: 18px;
+}

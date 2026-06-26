@@ -1,0 +1,222 @@
+body {
+    font-family: var(--font-body);
+    background:
+        radial-gradient(circle at top left, rgba(215, 232, 234, 0.9), transparent 30%),
+        radial-gradient(circle at top right, rgba(223, 231, 207, 0.95), transparent 26%),
+        linear-gradient(180deg, #fcfbf7 0%, #f4f0e6 100%);
+    color: var(--color-ink);
+}
+
+h1,
+h2,
+h3,
+.hero-title {
+    font-family: var(--font-heading);
+}
+
+.dashboard-shell {
+    padding: var(--space-shell-y) var(--space-shell-x) 56px;
+}
+
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 0 28px;
+    padding: 28px;
+    border-radius: var(--radius-hero);
+    background:
+        linear-gradient(135deg, rgba(120, 182, 60, 0.95), rgba(74, 92, 55, 0.86)),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.18), transparent 60%);
+    box-shadow: var(--shadow-panel);
+    color: #fff;
+}
+
+.hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: auto -120px -140px auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 18px;
+}
+
+.hero-copy {
+    flex: 0 1 680px;
+    max-width: 680px;
+}
+
+.hero-kicker {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.16);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 8px;
+    font-size: clamp(2.5rem, 4vw, 4.2rem);
+    line-height: 1;
+}
+
+.hero-subtitle {
+    margin: 0;
+    max-width: 60ch;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.02rem;
+    line-height: 1.65;
+}
+
+.hero-logo-wrap {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: 300px;
+    margin-left: auto;
+    padding: 10px 12px;
+    border-radius: var(--radius-logo);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: var(--shadow-logo);
+}
+
+.hero-logo {
+    display: block;
+    width: min(300px, 150%);
+    height: auto;
+}
+
+.filter-panel,
+.section-panel,
+.map-panel,
+.observers-panel {
+    margin-bottom: 24px;
+    padding: var(--space-panel);
+    border: 1px solid rgba(47, 107, 63, 0.08);
+    border-radius: var(--radius-panel);
+    background: var(--surface-panel);
+    box-shadow: var(--shadow-panel);
+    backdrop-filter: blur(12px);
+}
+
+.filter-panel {
+    position: relative;
+    z-index: 1200;
+    overflow: visible;
+}
+
+.filter-panel .Select,
+.filter-panel .Select-control,
+.filter-panel .Select-menu-outer {
+    position: relative;
+}
+
+.filter-panel .Select.is-open,
+.filter-panel .Select-menu-outer {
+    z-index: 1300;
+}
+
+.panel-title {
+    margin-bottom: 14px;
+    color: var(--color-forest);
+    font-size: clamp(1.9rem, 2.8vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.panel-intro {
+    margin-bottom: 18px;
+    color: rgba(34, 49, 39, 0.78);
+}
+
+.metrics-row {
+    row-gap: 16px;
+    margin-bottom: 26px;
+}
+
+.metric-card {
+    border: 0;
+    border-radius: var(--radius-card);
+    background: linear-gradient(180deg, var(--surface-card-from), var(--surface-card-to));
+    box-shadow: var(--shadow-card);
+}
+
+.metric-card-body {
+    padding: 24px;
+}
+
+.metric-label {
+    margin-bottom: 8px;
+    color: rgba(34, 49, 39, 0.68);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.metric-value {
+    margin: 0;
+    color: var(--color-forest);
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+}
+
+.section-grid {
+    align-items: stretch;
+}
+
+.chart-wrap {
+    min-height: 100%;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.leaflet-container {
+    border-radius: var(--radius-map);
+}
+
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-logo-wrap {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-shell {
+        padding: 18px 10px 40px;
+    }
+
+    .hero-banner,
+    .filter-panel,
+    .section-panel,
+    .map-panel,
+    .observers-panel {
+        padding: var(--space-panel-mobile);
+        border-radius: 22px;
+    }
+}

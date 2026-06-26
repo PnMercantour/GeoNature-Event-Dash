@@ -7,12 +7,11 @@ def card(title, nb, id):
         [
             dbc.CardBody(
                 [
-                    html.H5(title, className="card-title"),
-                    html.H2(nb, className="card-text", id=id),
+                    html.P(title, className="metric-label"),
+                    html.H2(nb, className="metric-value", id=id),
                 ],
-                className="text-center",
+                className="text-center metric-card-body",
             ),
         ],
-        style={"width": "18rem"},
-        className="me-2",
+        className="metric-card h-100",
     )
